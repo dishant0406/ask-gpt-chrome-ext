@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "sendToGPT",
-    title: "Ask GPT",
+    title: "Ask",
     contexts: ["selection"],
   });
 });
@@ -82,7 +82,7 @@ function createFloatingInput(selectedText, tabId) {
 
 
   // Adding an image at the start of the input
-  input.style.backgroundImage = 'url("https://imageupload.io/ib/adsrUTaPPYgrOqm_1699984807.png")';
+  input.style.backgroundImage = 'url("https://cdn.jsdelivr.net/gh/dishant0406/images-repo@master/48.png")';
   input.style.backgroundRepeat = 'no-repeat';
   input.style.backgroundSize = '20px 20px'; // Adjust as needed
   input.style.backgroundPosition = '10px center'; // Adjust as needed
