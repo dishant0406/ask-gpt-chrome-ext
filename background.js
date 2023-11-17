@@ -55,20 +55,13 @@ function createFloatingInput(selectedText, tabId) {
   const input = document.createElement("input");
   input.id = "gptInputBox";
 
-  let x = 0, y = 0;
-  const selection = window.getSelection();
-  if (selection.rangeCount > 0) {
-    const range = selection.getRangeAt(0);
-    const rect = range.getBoundingClientRect();
-    x = rect.left + window.scrollX;
-    y = rect.top + window.scrollY;
-  }
+
 
   // Position and size
   input.style.position = 'fixed';
-  input.style.top = `${y - input.offsetHeight - 50}px`;
-  input.style.left = `${x}px`;
-  input.style.zIndex = '1000';
+  input.style.top = `${window.innerHeight / 2 - 50}px`;
+  input.style.left = `${window.innerWidth / 2 - 150}px`;
+  input.style.zIndex = '100000000';
 
   // Styling for modern dark theme
   input.style.border = '2px solid #333'; // Darker border
