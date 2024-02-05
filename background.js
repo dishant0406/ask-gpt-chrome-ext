@@ -29,7 +29,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 const sendDataToAPI = async (selectedText, question) => {
   //post request with body text as selectedText and question as question to http://localhost:4000/api/snippets/ask
   try {
-    const response = await fetch('https://api.lazyweb.rocks/api/snippets/ask', {
+    const response = await fetch('https://ask-gpt-chi.vercel.app/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
